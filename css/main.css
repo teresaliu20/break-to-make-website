@@ -32,11 +32,13 @@ p {
 /* SCISSOR ANIMATION STYLING */
 .hidden-scroll {
     overflow: hidden;
+    z-index: 2;
 }
 #cutting-paper {
     position: fixed;
     height: 100vh;
     width: 100vw;
+    z-index: 2;
 }
 .triangle-topleft {
     position: absolute;
@@ -45,6 +47,7 @@ p {
     top: 0;
     border-top: 100vh solid #F3B1B2;
     border-right: 100vw solid transparent;
+    z-index: 2;
 }
 .triangle-bottomright {
     position: absolute;
@@ -52,12 +55,14 @@ p {
     height: 0;
     border-bottom: 100vh solid #FFD0D1;
     border-left: 100vw solid transparent;
+    z-index: 2;
 }
 #scissors {
     height: 50px;
     position: absolute;
     bottom: 0;
     left: 0;
+    z-index: 2;
 }
 #title-main {
     position: absolute;
@@ -65,14 +70,14 @@ p {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 1;
+    z-index: 3;
 }
 #corner-logo {
     position: fixed;
     top: -10px;
     left: -20px;
     height: 150px;
-    z-index: 5;
+    z-index: 4;
 }
 #scroll-instruction {
     position: absolute;
@@ -84,6 +89,15 @@ p {
     color: black;
     border-top: 1px solid black;
     padding-top: 10px;
+    z-index: 2;
+}
+/* WHITE OVERLAY */
+.white-overlay {
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+    background-color: white;
+    position: absolute;
 }
 /* GENERAL STYLES AFTER INTRO ANIMATION */
 .page {
@@ -91,12 +105,6 @@ p {
     position: relative;
     opacity: 0;
     display: none;
-}
-.page-shown {
-    opacity: 1;
-    width: 100%;
-    position: relative;
-    display: flex;
     flex-wrap: wrap;
 }
 .title {
@@ -238,7 +246,7 @@ p {
 
 /* SCHEDULE PAGE: IMAGE OVERLAY */
 .image-overlay {
-    z-index: 11;
+    z-index: 1;
     position: fixed;
 }
 #hammer {

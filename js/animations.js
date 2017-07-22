@@ -49,6 +49,12 @@ $(document).ready(function() {
     }
     // ************ Reveal main website ************
     else {
+      $('.white-overlay').fadeOut('slow');
+      console.log(((y - scissorAnimationMax) / 2000))
+      $('.page').css ({
+        'opacity': 1,
+        'display': 'flex'
+      })
       $('.triangle-topleft').css({
           'display': 'none'
       })
@@ -64,15 +70,12 @@ $(document).ready(function() {
       $('#brushes').css({
         'display': 'block'
       })
-      console.log(y);
-      console.log("CURRENT=", (y - scissorAnimationMax) / 100)
       $('#bulb').css({
         'bottom': (Math.pow(((y - scissorAnimationMax) / 100), 1.6)) - 70 +'%'
       })
       $('#hidden-scroll').css({
         'display': 'none'
       })
-      $('.page').addClass("page-shown")
     }
   })
 })
