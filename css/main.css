@@ -9,11 +9,6 @@
     src: url(../fonts/AvenirNext/AvenirNext-Medium.ttf) format('truetype');
 }
 
-@font-face {
-    font-family: 'Avenir Next UltraLight';
-    src: url(../fonts/AvenirNext/AvenirNext-UltraLight.ttf) format('truetype');
-}
-
 /* GENERAL STYLES FOR ALL PAGES */
 body {
     margin: 0;
@@ -26,7 +21,6 @@ h1 h2 h3 {
 }
 p {
     font-family: 'Avenir Next Medium';
-    font-weight: 200;
 }
 
 /* SCISSOR ANIMATION STYLING */
@@ -202,7 +196,6 @@ p {
     width: 40%;
     text-align: center;
     transition: 0.6s;
-    font-weight: 500;
 }
 
 .apply-button:hover {
@@ -241,7 +234,6 @@ p {
     min-width: 90px;
 }
 .schedule-table tr th {
-    font-weight: 100;
     line-height: 1.5em;
 }
 
@@ -332,7 +324,6 @@ p {
 }
 .question-answer {
     font-size: 18px;
-    font-weight: 450;
 }
 
 /* FOOTER */
@@ -368,7 +359,7 @@ p {
         padding: 140px 0px 0px 40px;
     }
     #intro-title {
-        font-size: 52px;
+        font-size: 48px;
     }
     th {
         font-size: 15px;
