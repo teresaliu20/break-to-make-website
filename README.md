@@ -9,3 +9,5 @@ Break to Make is an all-women makeathon at USC. Join us on September 23 - 24 in 
 ## Designed with:
 - Adobe Illustrator
 - Sketch
+
+### Created on July 22nd, 2017 by Teresa Liu
