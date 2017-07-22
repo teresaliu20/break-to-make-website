@@ -49,7 +49,7 @@ $(document).ready(function() {
     }
     // ************ Reveal main website ************
     else {
-      $('.white-overlay').fadeOut('slow');
+      $('.white-overlay').fadeOut(800);
       console.log(((y - scissorAnimationMax) / 2000))
       $('.page').css ({
         'opacity': 1,
