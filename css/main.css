@@ -380,3 +380,30 @@ p {
         display: hidden;
     }
 }
+/*@media only screen and (max-width: 400px) {
+    #intro-info {
+        padding: 140px 0px 0px 40px;
+    }
+    #intro-title {
+        font-size: 52px;
+    }
+    th {
+        font-size: 15px;
+    }
+    .schedule-table tr th:first-child {
+        padding-left: 35px;
+    }
+    .image-overlay {
+        display: hidden;
+    }
+    .white-overlay {
+        display: none;
+    }
+    #hidden-scroll {
+        display: none;
+    }
+    .page {
+        opacity: 1;
+        display: flex;
+    }
+}*/

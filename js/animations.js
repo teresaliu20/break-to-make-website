@@ -1,10 +1,8 @@
 $(document).ready(function() {
-  console.log('Ready!');
   var x = 0;
-  var y = 0
+  var y = 0;
 
   $(document).on('scroll', function(){
-    // console.log("SCROLL TOP" + $(window).scrollTop());
     if ($(window).scrollTop() > $(window).height() * 1 &&
         $(window).scrollTop() < $(window).height() * 5 &&
         $(window).width() > 700) {
@@ -22,8 +20,6 @@ $(document).ready(function() {
   $(document).on('mousewheel', function() {
     x += event.deltaX;
     y += event.deltaY;
-    // console.log(x, y);
-    // console.log($(window).height())
     var scissorAnimationMax = $(window).height() * 1.3
     var splittingAnimationMax = $(window).height() * 3.2
     var width = $(document).width()
@@ -50,7 +46,6 @@ $(document).ready(function() {
     // ************ Reveal main website ************
     else {
       $('.white-overlay').fadeOut(800);
-      console.log(((y - scissorAnimationMax) / 2000))
       $('.page').css ({
         'opacity': 1,
         'display': 'flex'
@@ -78,4 +73,16 @@ $(document).ready(function() {
       })
     }
   })
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+    $('.page').css ({
+      'opacity': 1,
+      'display': 'flex'
+    })
+    $('#hidden-scroll').css({
+      'display': 'none'
+    })
+    $('.white-overlay').css({
+      'display': 'none'
+    })
+  }
 })
