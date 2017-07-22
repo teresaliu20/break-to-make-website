@@ -108,6 +108,7 @@ p {
     flex-wrap: wrap;
 }
 .title {
+    font-family: 'Avenir Next Bold'
     -webkit-text-stroke-width: 1.2px;
     font-size: 56px;
 }
@@ -325,10 +326,9 @@ p {
     max-width: 700px;
 }
 .question {
-    font-weight: 700;
+    font-family: 'Avenir Next Bold'
     font-size: 20px;
     margin: 15px;
-    letter-spacing: 0.2px;
 }
 .question-answer {
     font-size: 18px;
@@ -355,6 +355,7 @@ p {
 }
 #footer-apply-button {
     margin-top: 40px;
+    max-width: 300px;
     color: white;
 }
 #footer-apply-button:hover {
