@@ -74,7 +74,17 @@ p {
     height: 150px;
     z-index: 5;
 }
-
+#scroll-instruction {
+    position: absolute;
+    font-size: 18px;
+    bottom: 10px;
+    right: 30px;
+    z-index: 1;
+    font-family: 'Avenir Next Medium';
+    color: black;
+    border-top: 1px solid black;
+    padding-top: 10px;
+}
 /* GENERAL STYLES AFTER INTRO ANIMATION */
 .page {
     width: 100%;
