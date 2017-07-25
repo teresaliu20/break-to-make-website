@@ -9,30 +9,73 @@
     src: url(../fonts/AvenirNext/AvenirNext-Medium.ttf) format('truetype');
 }
 
+@font-face {
+    font-family: 'Avenir Next UltraLight';
+    src: url(../fonts/AvenirNext/AvenirNext-UltraLight.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Proxima Nova Black';
+    src: url(../fonts/ProximaNova/ProximaNova-Black.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Proxima Nova Bold';
+    src: url(../fonts/ProximaNova/ProximaNova-Bold.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Proxima Nova Extrabold';
+    src: url(../fonts/ProximaNova/ProximaNova-Extrabold.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Proxima Nova Semibold';
+    src: url(../fonts/ProximaNova/ProximaNova-Semibold.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Proxima Nova Regular';
+    src: url(../fonts/ProximaNova/ProximaNova-Regular.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Proxima Nova Light';
+    src: url(../fonts/ProximaNova/ProximaNova-Light.otf) format('opentype');
+}
+
 /* GENERAL STYLES FOR ALL PAGES */
 body {
     margin: 0;
-    font-family: 'Avenir Next Medium', sans-serif;
     height: 100%;
     overflow-x: hidden;
+    font-family: 'Proxima Nova Regular';
 }
 h1 h2 h3 {
-    font-family: 'Avenir Next Bold';
+    font-family: 'Proxima Nova Bold';
 }
 p {
-    font-family: 'Avenir Next Medium';
+    font-family: 'Proxima Nova Regular';
+    line-height: 1.4em;
+    letter-spacing: 0.1px;
+}
+span {
+    font-family: 'Proxima Nova Regular';
+    letter-spacing: 0.1px;
+}
+th {
+    font-family: 'Proxima Nova Regular';
+    letter-spacing: 0.1px;
 }
 
 /* SCISSOR ANIMATION STYLING */
 .hidden-scroll {
     overflow: hidden;
-    z-index: 2;
 }
 #cutting-paper {
     position: fixed;
     height: 100vh;
     width: 100vw;
-    z-index: 2;
 }
 .triangle-topleft {
     position: absolute;
@@ -41,7 +84,6 @@ p {
     top: 0;
     border-top: 100vh solid #F3B1B2;
     border-right: 100vw solid transparent;
-    z-index: 2;
 }
 .triangle-bottomright {
     position: absolute;
@@ -49,14 +91,12 @@ p {
     height: 0;
     border-bottom: 100vh solid #FFD0D1;
     border-left: 100vw solid transparent;
-    z-index: 2;
 }
 #scissors {
     height: 50px;
     position: absolute;
     bottom: 0;
     left: 0;
-    z-index: 2;
 }
 #title-main {
     position: absolute;
@@ -64,46 +104,33 @@ p {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 3;
+    z-index: 1;
 }
 #corner-logo {
     position: fixed;
     top: -10px;
     left: -20px;
     height: 150px;
-    z-index: 4;
+    z-index: 5;
 }
-#scroll-instruction {
-    position: absolute;
-    font-size: 18px;
-    bottom: 10px;
-    right: 30px;
-    z-index: 1;
-    font-family: 'Avenir Next Medium';
-    color: black;
-    border-top: 1px solid black;
-    padding-top: 10px;
-    z-index: 2;
-}
-/* WHITE OVERLAY */
-.white-overlay {
-    height: 100vh;
-    width: 100vw;
-    z-index: 1;
-    background-color: white;
-    position: absolute;
-}
+
 /* GENERAL STYLES AFTER INTRO ANIMATION */
 .page {
     width: 100%;
     position: relative;
     opacity: 0;
     display: none;
+}
+.page-shown {
+    opacity: 1;
+    width: 100%;
+    position: relative;
+    display: flex;
     flex-wrap: wrap;
 }
 .title {
-    font-family: 'Avenir Next Bold'
-    -webkit-text-stroke-width: 1.2px;
+    font-family: 'Proxima Nova Bold';
+    -webkit-text-stroke-width: 1.5px;
     font-size: 56px;
 }
 .text-small {
@@ -122,9 +149,10 @@ p {
     flex: 2;
     padding: 100px 0px 0px 110px;
     height: 80vh;
+    font-family: 'Proxima Nova ';
 }
 #intro-title {
-    font-family: 'Avenir Next Bold';
+    font-family: 'Proxima Nova Black';
     text-transform: uppercase;
     -webkit-text-stroke-width: 1.2px;
     color: #3562CC;
@@ -196,6 +224,7 @@ p {
     width: 40%;
     text-align: center;
     transition: 0.6s;
+    border-radius: 3px;
 }
 
 .apply-button:hover {
@@ -221,6 +250,7 @@ p {
     margin-bottom: 0;
 }
 .schedule-day-title {
+    font-family: 'Proxima Nova Bold';
     color: #3562CC;
     font-size: 28px;
     margin-top: 50px;
@@ -231,15 +261,16 @@ p {
     margin-bottom: 30px;
 }
 .schedule-table tr th:first-child {
-    min-width: 90px;
+    min-width: 100px;
 }
 .schedule-table tr th {
     line-height: 1.5em;
+    font-size: 17px;
 }
 
 /* SCHEDULE PAGE: IMAGE OVERLAY */
 .image-overlay {
-    z-index: 1;
+    z-index: 11;
     position: fixed;
 }
 #hammer {
@@ -318,12 +349,14 @@ p {
     max-width: 700px;
 }
 .question {
-    font-family: 'Avenir Next Bold'
+    font-family: 'Proxima Nova Semibold';
     font-size: 20px;
     margin: 15px;
+    letter-spacing: 0.2px;
 }
 .question-answer {
     font-size: 18px;
+    font-weight: 450;
 }
 
 /* FOOTER */
@@ -346,7 +379,6 @@ p {
 }
 #footer-apply-button {
     margin-top: 40px;
-    max-width: 300px;
     color: white;
 }
 #footer-apply-button:hover {
@@ -355,23 +387,6 @@ p {
 
 /* MEDIA QUERIES FOR RESPONSIVE DESIGN */
 @media only screen and (max-width: 700px) {
-    #intro-info {
-        padding: 140px 0px 0px 40px;
-    }
-    #intro-title {
-        font-size: 48px;
-    }
-    th {
-        font-size: 15px;
-    }
-    .schedule-table tr th:first-child {
-        padding-left: 35px;
-    }
-    .image-overlay {
-        display: hidden;
-    }
-}
-/*@media only screen and (max-width: 400px) {
     #intro-info {
         padding: 140px 0px 0px 40px;
     }
@@ -387,14 +402,4 @@ p {
     .image-overlay {
         display: hidden;
     }
-    .white-overlay {
-        display: none;
-    }
-    #hidden-scroll {
-        display: none;
-    }
-    .page {
-        opacity: 1;
-        display: flex;
-    }
-}*/
+}
