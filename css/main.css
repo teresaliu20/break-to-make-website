@@ -14,19 +14,63 @@
     src: url(../fonts/AvenirNext/AvenirNext-UltraLight.ttf) format('truetype');
 }
 
+@font-face {
+    font-family: 'Avenir Next UltraLight';
+    src: url(../fonts/AvenirNext/AvenirNext-UltraLight.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Proxima Nova Black';
+    src: url(../fonts/ProximaNova/ProximaNova-Black.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Proxima Nova Bold';
+    src: url(../fonts/ProximaNova/ProximaNova-Bold.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Proxima Nova Extrabold';
+    src: url(../fonts/ProximaNova/ProximaNova-Extrabold.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Proxima Nova Semibold';
+    src: url(../fonts/ProximaNova/ProximaNova-Semibold.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Proxima Nova Regular';
+    src: url(../fonts/ProximaNova/ProximaNova-Regular.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Proxima Nova Light';
+    src: url(../fonts/ProximaNova/ProximaNova-Light.otf) format('opentype');
+}
+
 /* GENERAL STYLES FOR ALL PAGES */
 body {
     margin: 0;
-    font-family: 'Avenir Next Medium', sans-serif;
     height: 100%;
     overflow-x: hidden;
+    font-family: 'Proxima Nova Regular';
 }
 h1 h2 h3 {
-    font-family: 'Avenir Next Bold';
+    font-family: 'Proxima Nova Bold';
 }
 p {
-    font-family: 'Avenir Next Medium';
-    font-weight: 200;
+    font-family: 'Proxima Nova Regular';
+    line-height: 1.4em;
+    letter-spacing: 0.1px;
+}
+span {
+    font-family: 'Proxima Nova Regular';
+    letter-spacing: 0.1px;
+}
+th {
+    font-family: 'Proxima Nova Regular';
+    letter-spacing: 0.1px;
 }
 
 /* SCISSOR ANIMATION STYLING */
@@ -78,6 +122,14 @@ p {
     left: -20px;
     height: 150px;
     z-index: 4;
+    transition: 0.5s;
+}
+#corner-logo:hover {
+    -webkit-transform: scale(1.2) rotate(360deg);
+    -moz-transform: scale(1.2) rotate(360deg);
+    -ms-transform: scale(1.2) rotate(360deg);
+    -o-transform: scale(1.2) rotate(360deg);
+    transform: scale(1.2) rotate(360deg);
 }
 #scroll-instruction {
     position: absolute;
@@ -108,7 +160,7 @@ p {
     flex-wrap: wrap;
 }
 .title {
-    font-family: 'Avenir Next Bold'
+    font-family: 'Proxima Nova Bold';
     -webkit-text-stroke-width: 1.2px;
     font-size: 56px;
 }
@@ -128,9 +180,10 @@ p {
     flex: 2;
     padding: 100px 0px 0px 110px;
     height: 80vh;
+    font-family: 'Proxima Nova ';
 }
 #intro-title {
-    font-family: 'Avenir Next Bold';
+    font-family: 'Proxima Nova Black';
     text-transform: uppercase;
     -webkit-text-stroke-width: 1.2px;
     color: #3562CC;
@@ -228,6 +281,7 @@ p {
     margin-bottom: 0;
 }
 .schedule-day-title {
+    font-family: 'Proxima Nova Bold';
     color: #3562CC;
     font-size: 28px;
     margin-top: 50px;
@@ -326,7 +380,7 @@ p {
     max-width: 700px;
 }
 .question {
-    font-family: 'Avenir Next Bold'
+    font-family: 'Proxima Nova Semibold';
     font-size: 20px;
     margin: 15px;
 }
