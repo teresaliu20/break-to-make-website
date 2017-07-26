@@ -10,6 +10,11 @@
 }
 
 @font-face {
+    font-family: 'Avenir Next UltraLight';
+    src: url(../fonts/AvenirNext/AvenirNext-UltraLight.ttf) format('truetype');
+}
+
+@font-face {
     font-family: 'Proxima Nova Black';
     src: url(../fonts/ProximaNova/ProximaNova-Black.otf) format('opentype');
 }
@@ -66,13 +71,11 @@ th {
 /* SCISSOR ANIMATION STYLING */
 .hidden-scroll {
     overflow: hidden;
-    z-index: 2;
 }
 #cutting-paper {
     position: fixed;
     height: 100vh;
     width: 100vw;
-    z-index: 2;
 }
 .triangle-topleft {
     position: absolute;
@@ -81,7 +84,6 @@ th {
     top: 0;
     border-top: 100vh solid #F3B1B2;
     border-right: 100vw solid transparent;
-    z-index: 2;
 }
 .triangle-bottomright {
     position: absolute;
@@ -89,14 +91,12 @@ th {
     height: 0;
     border-bottom: 100vh solid #FFD0D1;
     border-left: 100vw solid transparent;
-    z-index: 2;
 }
 #scissors {
     height: 50px;
     position: absolute;
     bottom: 0;
     left: 0;
-    z-index: 2;
 }
 #title-main {
     position: absolute;
@@ -104,7 +104,7 @@ th {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 3;
+    z-index: 1;
 }
 #corner-logo {
     position: fixed;
@@ -133,12 +133,19 @@ th {
     background-color: white;
     position: absolute;
 }
+
 /* GENERAL STYLES AFTER INTRO ANIMATION */
 .page {
     width: 100%;
     position: relative;
     opacity: 0;
     display: none;
+}
+.page-shown {
+    opacity: 1;
+    width: 100%;
+    position: relative;
+    display: flex;
     flex-wrap: wrap;
 }
 .title {
@@ -162,6 +169,7 @@ th {
     flex: 2;
     padding: 100px 0px 0px 110px;
     height: 80vh;
+    font-family: 'Proxima Nova ';
 }
 #intro-title {
     font-family: 'Proxima Nova Black';
@@ -237,6 +245,7 @@ th {
     text-align: center;
     transition: 0.6s;
     font-size: 20px;
+    border-radius: 3px;
 }
 
 .apply-button:hover {
@@ -282,7 +291,7 @@ th {
 
 /* SCHEDULE PAGE: IMAGE OVERLAY */
 .image-overlay {
-    z-index: 1;
+    z-index: 11;
     position: fixed;
 }
 #hammer {
@@ -368,6 +377,7 @@ th {
 }
 .question-answer {
     font-size: 18px;
+    font-weight: 450;
 }
 
 /* FOOTER */
@@ -390,7 +400,6 @@ th {
 }
 #footer-apply-button {
     margin-top: 40px;
-    max-width: 300px;
     color: white;
 }
 #footer-apply-button:hover {
@@ -399,23 +408,6 @@ th {
 
 /* MEDIA QUERIES FOR RESPONSIVE DESIGN */
 @media only screen and (max-width: 700px) {
-    #intro-info {
-        padding: 140px 0px 0px 40px;
-    }
-    #intro-title {
-        font-size: 48px;
-    }
-    th {
-        font-size: 15px;
-    }
-    .schedule-table tr th:first-child {
-        padding-left: 35px;
-    }
-    .image-overlay {
-        display: hidden;
-    }
-}
-/*@media only screen and (max-width: 400px) {
     #intro-info {
         padding: 140px 0px 0px 40px;
     }
@@ -431,14 +423,4 @@ th {
     .image-overlay {
         display: hidden;
     }
-    .white-overlay {
-        display: none;
-    }
-    #hidden-scroll {
-        display: none;
-    }
-    .page {
-        opacity: 1;
-        display: flex;
-    }
-}*/
+}
