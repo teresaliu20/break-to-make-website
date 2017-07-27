@@ -65,9 +65,11 @@ $(document).ready(function() {
       $('#brushes').css({
         'display': 'block'
       })
-      $('#bulb').css({
-        'bottom': (Math.pow(((y - scissorAnimationMax) / 100), 1.6)) - 70 +'%'
-      })
+      if ($(window).width() > 500) {
+        $('#bulb').css({
+          'bottom': (Math.pow(((y - scissorAnimationMax) / 100), 1.6)) - 70 +'%'
+        })
+      }
       $('#hidden-scroll').css({
         'display': 'none'
       })
