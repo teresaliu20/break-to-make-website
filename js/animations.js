@@ -65,6 +65,9 @@ $(document).ready(function() {
       $('#brushes').css({
         'display': 'block'
       })
+      $('#brushes-img-wrapper').css({
+        'display': 'block'
+      })
       if ($(window).width() > 500) {
         $('#bulb').css({
           'bottom': (Math.pow(((y - scissorAnimationMax) / 100), 1.6)) - 70 +'%'
