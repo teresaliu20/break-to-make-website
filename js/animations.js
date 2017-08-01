@@ -66,7 +66,8 @@ $(document).ready(function() {
         'display': 'block'
       })
       $('#brushes-img-wrapper').css({
-        'display': 'block'
+        'display': 'block',
+        
       })
       if ($(window).width() > 500) {
         $('#bulb').css({
