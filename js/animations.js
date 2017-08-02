@@ -21,7 +21,7 @@ $(document).ready(function() {
     x += event.deltaX;
     y += event.deltaY;
     var scissorAnimationMax = $(window).height() * 1.3
-    var splittingAnimationMax = $(window).height() * 3.2
+    var splittingAnimationMax = $(window).height() * 1.6
     var width = $(document).width()
     var height = $(document).height()
     // ************ Move scissors across page ************
@@ -42,23 +42,22 @@ $(document).ready(function() {
       $('#title-main').css({
         'opacity': 1 - ((y - scissorAnimationMax) / 200)
       })
+      $('.triangle-topleft').fadeOut(500);
+      $('.triangle-bottomright').fadeOut(500);
     }
     // ************ Reveal main website ************
     else {
-      $('.white-overlay').fadeOut(800);
+      $('.white-overlay').fadeOut(500);
       $('.page').css ({
         'opacity': 1,
         'display': 'flex'
       })
-      $('.triangle-topleft').css({
-          'display': 'none'
-      })
-      $('.triangle-bottomright').css({
-          'display': 'none'
-      })
       $('#scissors').css({
         'display': 'none'
       })
+      $('#hidden-scroll').css({
+        'display': 'none'
+      });
       $('#title').css({
         'display': 'none'
       })
@@ -71,12 +70,9 @@ $(document).ready(function() {
       })
       if ($(window).width() > 500) {
         $('#bulb').css({
-          'bottom': (Math.pow(((y - scissorAnimationMax) / 100), 1.6)) - 70 +'%'
+          'bottom': (Math.pow(((y - scissorAnimationMax) / 100), 2))  +'%'
         })
       }
-      $('#hidden-scroll').css({
-        'display': 'none'
-      })
     }
   })
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
@@ -90,5 +86,20 @@ $(document).ready(function() {
     $('.white-overlay').css({
       'display': 'none'
     })
+  }
+  $.browser.chrome = /chrom(e|ium)/.test(navigator.userAgent.toLowerCase()); 
+
+  if(!$.browser.chrome){
+    $('.page').css ({
+      'opacity': 1,
+      'display': 'flex'
+    })
+    $('#hidden-scroll').css({
+      'display': 'none'
+    })
+    $('.white-overlay').css({
+      'display': 'none'
+    })
+
   }
 })

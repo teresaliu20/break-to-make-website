@@ -248,6 +248,11 @@ th {
     padding-left: 100px;
     display: none;
 }
+#brushes:hover {
+    -ms-transform: rotate(10deg); /* IE 9 */
+    -webkit-transform: rotate(10deg); /* Chrome, Safari, Opera */
+    transform: rotate(10deg);
+}
 #apply-p {
     padding-right: 20px;
     border-right: 2px solid white;
@@ -270,7 +275,6 @@ th {
 /* SCHEDULE PAGE */
 .schedule-page {
     z-index: -2;
-    height: 180vh;
     flex-direction: column;
     align-items: center;
     flex-wrap: none;
